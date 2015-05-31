@@ -32,7 +32,7 @@ sudo systemctl restart httpd.service
 # PHP Packages
 sudo yum -y install php5-curl
 sudo yum -y install libmcrypt-devel
-sudo yum -y install php-mcrypt
+sudo yum -y install php-mcrypt php-mbstring php-tokenizer php-openssl
 
 # Revision Control
 sudo yum -y install git subversion
