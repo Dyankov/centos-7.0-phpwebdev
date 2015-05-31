@@ -1,0 +1,26 @@
+#### Rename this file to "settings.yaml" and make your changes ####
+
+# Private nerwork IP addres. Make sure it is not used.
+private_network_ip: "192.168.50.50"
+
+# RAM
+vm_memory: 1024
+
+# List which files to be move on "provision" command from local source file to VM.
+# Source path MUST BE FULL. In case "~" is used in source path the file won't be moved.
+files_to_move:
+  - source: "./bootstrap/files/bash_aliases"
+    to: "~/.bash_aliases"
+
+# List of folder which to be Synced
+folders_to_sync:
+  - from: "./www"
+    to: "/home/vagrant/www"
+
+# Which ports to be forwared
+ports_to_forward:
+  - guest: 80
+    host: 8080
+
+  - guest: 3306
+    host: 33060

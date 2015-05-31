@@ -1,0 +1,7 @@
+alias ll='ls -alGhp'
+alias ls='ls -Ghp'
+alias h='cd ~'
+alias c='clear'
+alias ..='cd ..'
+alias du='du -mh'
+alias art='php artisan'
