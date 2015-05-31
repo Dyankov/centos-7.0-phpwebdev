@@ -1,3 +1,4 @@
-sudo yum -y install httpd
+installPackage httpd
+
 sudo systemctl start httpd.service
 sudo systemctl enable httpd.service

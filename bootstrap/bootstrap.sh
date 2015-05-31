@@ -5,12 +5,9 @@ sudo yum -y update
 
 # Set server timezone and sync time
 sudo timedatectl set-timezone Europe/Sofia
-sudo yum -y install ntp
-sudo systemctl start ntpd
-sudo systemctl enable ntpd
 
-# Extra Packages for Enterprise Linux Repos
-sudo yum -y install epel-release
+# Include Shell Helper Functions
+. /vagrant/bootstrap/shell/functions.sh
 
 PROVISIONS=/vagrant/bootstrap/provisions/*.sh
 for provision in $PROVISIONS

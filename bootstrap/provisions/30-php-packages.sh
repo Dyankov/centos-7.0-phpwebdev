@@ -1,1 +1,4 @@
-sudo yum -y install php5-curl libmcrypt-devel php-mcrypt php-mbstring php-tokenizer php-openssl
+installPackage php-common
+installPackage libmcrypt-devel
+installPackage php-mcrypt
+installPackage php-mbstring

@@ -24,6 +24,8 @@ This is a Vagrant CentOS based Virtual Machine setup.
 - mbstring
 - tokenizer
 - openssl
+- phpspec
+- phpunit
 
 ### NodeJS Packages
 

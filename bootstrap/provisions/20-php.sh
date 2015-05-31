@@ -1,1 +1,1 @@
-sudo yum -y install php
+installPackage php

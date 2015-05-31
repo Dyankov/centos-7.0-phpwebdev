@@ -1,1 +1,1 @@
-sudo yum -y install vim-enhanced
+installPackage vim-enhanced

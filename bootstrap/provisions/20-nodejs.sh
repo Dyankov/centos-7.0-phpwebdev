@@ -1,1 +1,2 @@
-sudo yum -y install nodejs npm
+installPackage nodejs
+installPackage npm

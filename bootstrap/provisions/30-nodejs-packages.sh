@@ -1,1 +1,0 @@
-sudo npm install -g grunt grunt-cli gulp
