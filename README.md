@@ -14,6 +14,12 @@ $ git clone git@github.com:Dyankov/vagrant-centos.git
 
 Rename the file `vagrant-centos/bootstrap/settings.yam.dist` to `vagrant-centos/bootstrap/settings.yam.` (remove .dist) and changes accourding to your setup.
 
+Install Vagrant VBGuest pluging on your machine. This plugin is needed for proper folder syncing.
+
+```
+vagrant plugin install vagrant-vbguest
+```
+
 When you are ready run:
 
 ```

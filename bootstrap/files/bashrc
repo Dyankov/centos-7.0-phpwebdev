@@ -1,0 +1,21 @@
+# .bashrc
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
+# Uncomment the following line if you don't like systemctl's auto-paging feature:
+# export SYSTEMD_PAGER=
+
+# Add composer to PATH
+export PATH="~/.composer/vendor/bin/:$PATH"
+
+# User specific aliases and functions
+alias ll='ls -alGhp'
+alias ls='ls -Ghp'
+alias h='cd ~'
+alias c='clear'
+alias ..='cd ..'
+alias du='du -mh'
+alias art='php artisan'

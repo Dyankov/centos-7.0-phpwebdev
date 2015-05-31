@@ -15,7 +15,7 @@ Vagrant.configure(2) do |config|
 
   # Forward Ports
   settings["ports_to_forward"].each do |port|
-    config.vm.network "forwarded_port", guest: port.guest, host: port.host
+    config.vm.network "forwarded_port", guest: port["guest"], host: port["host"]
   end
 
   # Privae network. VM will apear on the bellow IP
@@ -24,12 +24,14 @@ Vagrant.configure(2) do |config|
   # Sync folders
   settings["folders_to_sync"].each do |folder|
     if File.exists? folder["from"] then
-      config.vm.synced_folder folder["from"], folder["to"]
+      mount_opts = folder["type"] == "nfs" ? ['actimeo=1'] : []
+      config.vm.synced_folder folder["from"], folder["to"], type: folder["type"] ||= nil, mount_options: mount_opts
     end
   end
 
   # Machine Configuration
   config.vm.provider "virtualbox" do |vb|
+    vb.name = 'vagrant-centos'
     vb.memory = settings["vm_memory"]
   end
 

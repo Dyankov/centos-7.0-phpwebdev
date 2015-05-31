@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# Update the VM
+sudo yum -y update
+
 # Set server timezone and sync time
 sudo timedatectl set-timezone Europe/Sofia
 sudo yum -y install ntp
@@ -9,8 +12,8 @@ sudo systemctl enable ntpd
 # Extra Packages for Enterprise Linux Repos
 sudo yum -y install epel-release
 
-# Update the VM
-sudo yum -y update
+# Vim
+sudo yum -y install vim-enhanced
 
 # Apache
 sudo yum -y install httpd
@@ -39,20 +42,15 @@ sudo yum -y install nodejs
 sudo yum -y install npm
 
 # Node Packages
-sudo npm install grunt gulp
+sudo npm install -g grunt grunt-cli gulp
 
 # Composer
 if [ ! -f /usr/local/bin/composer ]; then
     curl -sS https://getcomposer.org/installer | php -- --filename=composer
     sudo mv composer /usr/local/bin/composer
+else
+	sudo /usr/local/bin/composer self-update
 fi
 
-
-
-
-
-
-
-
-
-
+# Laravel Installer
+/usr/local/bin/composer global require "laravel/installer"
