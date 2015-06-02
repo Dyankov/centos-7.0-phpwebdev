@@ -1,11 +1,19 @@
-Vagrant CentOS Web VM
-=====================
+Vagrant CentOS Web Development VM
+=================================
 
 This is a Vagrant CentOS based Virtual Machine setup.
 
 # How to install
 
-Clone the repo in your home directory.
+First follow the install `vagrant` instuctions on your machine from here:
+
+https://docs.vagrantup.com/v2/installation/index.html
+
+This VM works with VirtualBox from Oracle so you need to install it also:
+
+https://www.virtualbox.org/
+
+After install of the required applications clone the repo in your home directory.
 
 ```
 $ git clone git@github.com:Dyankov/vagrant-centos.git
