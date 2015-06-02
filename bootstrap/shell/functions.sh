@@ -38,3 +38,16 @@ function installNodePackage
 		echo "NodeJS package $@ is already installed globally."
 	fi
 }
+
+# Create a vhosts folder inside /var/www/
+function createVhostFolder
+{
+    VHOSTPATH=/var/www/$@/public_html
+    if [ ! -d $VHOSTPATH ]; then
+        echo "Creating folder $VHOSTPATH for a Virtual host $@..."
+        sudo mkdir -p $VHOSTPATH
+        sudo chown -R $USER:$USER $VHOSTPATH
+    else
+        echo "Virtual Host $@ folder already exists."
+    fi
+}

@@ -35,7 +35,9 @@ vagrant reload --provision
 
 - CentOS 7
 - Apache 2.4
-- MariaDB
+- MySQL (MariaDB)
+- SQLite
+- PostgreSQL
 - MongoDB
 - phpMyAdmin
 - PHP 5.4
@@ -82,5 +84,4 @@ Note that if the provision is allready installed you have to `vagrant destroy` t
 
 * Now the server has only one PHP version installed 5.4. It is planned to support PHP 5.3, 5.5, 5.6 and 7
 * Shell scipt for securing MySQL
-* Addition DB - SQLite, PostgreSQL support
 * Shell script for building vhosts. Sites are defined in YAML file and sciprt build the vhosts, set sync and log folders, etc.

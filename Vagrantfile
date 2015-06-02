@@ -45,4 +45,6 @@ Vagrant.configure(2) do |config|
   # Run the bootstraping script
   config.vm.provision "shell", path: "./bootstrap/bootstrap.sh"
 
+  # Build Virtual Hosts
+  config.vm.provision "shell", path: "./bootstrap/vhosts.sh"
 end
