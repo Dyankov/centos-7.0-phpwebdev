@@ -1,1 +1,0 @@
-installPackage vim-enhanced

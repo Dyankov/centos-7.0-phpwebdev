@@ -1,6 +1,4 @@
-installComposerPackage laravel/installer
-installComposerPackage phpspec/phpspec
-installComposerPackage phpunit/phpunit
+# installComposerPackage laravel/installer
 
 # Updates Global Packages
 echo -e "\e[0;33mUpdating composer global packages...\e[0m"

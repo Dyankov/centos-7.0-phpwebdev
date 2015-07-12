@@ -11,7 +11,7 @@ settings = YAML::load(File.read(settings_file))
 Vagrant.configure(2) do |config|
 
   # Based on Cent OS 7
-  config.vm.box = "chef/centos-7.0"
+  config.vm.box = "dyankov/centos-7.0-phpwebdev"
 
   # Forward Ports
   settings["ports_to_forward"].each do |port|
@@ -31,7 +31,7 @@ Vagrant.configure(2) do |config|
 
   # Machine Configuration
   config.vm.provider "virtualbox" do |vb|
-    vb.name = 'vagrant-centos'
+    vb.name = 'CentOS-7.0-PHPWebDev'
     vb.memory = settings["vm_memory"]
   end
 

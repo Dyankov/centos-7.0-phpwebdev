@@ -1,4 +1,0 @@
-installPackage php-common
-installPackage libmcrypt-devel
-installPackage php-mcrypt
-installPackage php-mbstring

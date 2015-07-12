@@ -1,6 +1,3 @@
-# Extra Packages for Enterprise Linux Repos
-installPackage epel-release
-
 REPOS=/vagrant/bootstrap/yum-repos/*.repo
 for repo in $REPOS
 do

@@ -1,2 +1,0 @@
-installPackage nodejs
-installPackage npm

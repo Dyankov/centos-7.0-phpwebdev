@@ -1,2 +1,0 @@
-installPackage git
-installPackage subversion
