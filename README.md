@@ -16,13 +16,13 @@ https://www.virtualbox.org/
 After install of the required applications clone the repo in your home directory.
 
 ```
-$ git clone git@github.com:Dyankov/vagrant-centos.git
+$ git clone git@github.com:Dyankov/centos-7.0-phpwebdev.git
 ```
 
 or by https instead of ssh
 
 ```
-$ git clone https://github.com/Dyankov/vagrant-centos.git
+$ git clone https://github.com/Dyankov/centos-7.0-phpwebdev.git
 ```
 
 Rename the file `vagrant-centos/bootstrap/settings.yam.dist` to `vagrant-centos/bootstrap/settings.yam.` (remove .dist) and changes accourding to your setup.
@@ -54,7 +54,7 @@ vagrant reload --provision
 - PostgreSQL
 - MongoDB
 - phpMyAdmin
-- PHP 5.4
+- PHP 5.6
 - Git
 - SVN
 - NodeJS
