@@ -11,11 +11,3 @@ for VHOST in ${VHOSTS[@]}
 do
     createVhostFolder $VHOST
 done
-
-# Make sure that our Virtual Host configuration directories are presented.
-if [ ! -d /etc/httpd/sites-available ]; then
-    sudo mkdir /etc/httpd/sites-available
-fi
-if [ ! -d /etc/httpd/sites-enabled ]; then
-    sudo mkdir /etc/httpd/sites-enabled
-fi
