@@ -1,5 +1,7 @@
 #### Rename this file to "settings.yaml" and make your changes ####
 
+vm_name: "CentOS-7.0-PHPWebDev"
+
 # Private nerwork IP addres. Make sure it is not used.
 private_network_ip: "192.168.50.50"
 
@@ -9,14 +11,8 @@ vm_memory: 1024
 # List which files to be move on "provision" command from local source file to VM.
 # Source path MUST BE FULL. In case "~" is used in source path the file won't be moved.
 files_to_move:
-  - source: "./bootstrap/files/bash_aliases"
-    to: "~/.bash_aliases"
-
-# List of folder which to be Synced
-folders_to_sync:
-  - from: "./www"
-    to: "/var/www/html"
-    #type: nfs # you need to install nfsd first to use this.
+  - source: "/local/file/path"
+    to: "/guest/file/path"
 
 # Which ports to be forwared
 ports_to_forward:
@@ -25,3 +21,9 @@ ports_to_forward:
 
   - guest: 3306
     host: 33060
+
+# List of folder which to be Synced
+folders_to_sync:
+  - from: "/local/folder/path"
+    to: "/guest/folder/path"
+    #type: nfs # you need to install nfsd first to use this.
